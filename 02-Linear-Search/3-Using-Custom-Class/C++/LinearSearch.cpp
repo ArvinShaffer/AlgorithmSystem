@@ -1,13 +1,15 @@
 #include <iostream>
+#include "Student.h"
 
 using namespace std;
 
 class LinearSearch
 {
 private:
-	LinearSearch() {}
+    LinearSearch() {}
 public:
-    static int search(int *data, int target, int len){
+    template<typename T>
+    static int search(T *data, T target, int len){
         for(int i = 0; i < len; i++){
             if(data[i] == target){
                 return i;
@@ -15,7 +17,6 @@ public:
         }
         return -1;
     }
-private:
 };
 
 int main()
@@ -27,5 +28,11 @@ int main()
 
     int res2 = LinearSearch::search(data, 999, sizeof(data)/sizeof(data[0]));
     cout << res2 << endl;
+
+    Student stus[] = {Student("test1"), Student("test2"), Student("test3")};
+    Student stu("test2");
+
+    int res3 = LinearSearch::search(stus, stu, sizeof(stus)/sizeof(stus[0]));
+    cout << res3 << endl;
     return 0;
 }
