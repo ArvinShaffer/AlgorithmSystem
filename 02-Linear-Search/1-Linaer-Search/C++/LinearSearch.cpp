@@ -15,7 +15,6 @@ public:
         }
         return -1;
     }
-private:
 };
 
 int main()
