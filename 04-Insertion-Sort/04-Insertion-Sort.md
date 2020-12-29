@@ -19,6 +19,13 @@ arr[0, i) 已排好序；arr[i...n) 未排序
 
 ![003InsertionSort.gif](./InsertionSortPics/003InsertionSort.gif)
 
+# 3-Insertion-Sort-Features
+
+内层循环提前终止机制
+
+对于有序数组，插入排序的复杂度是O(n)的
+
+
 
 
 
